@@ -3,33 +3,37 @@
 /*enable alternative box-model via values for box-sizing (padding and border are included in the visible box)*/
 html {
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Perpetua, Baskerville, "Big Caslon", "Palatino Linotype", Palatino, serif;
+    color: #445916;
 }
-
 
 *, *::before, *::after {
     box-sizing: inherit;
 }
-
 
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.6;
     font-size: 2.5em;
 }
 
-
 /*body rules*/
 body {
     font-size: calc(1em + 0.25vw);
     line-height: 1.5;
     margin: 0; /*needs to be separately changed for other elements*/
+    background-color: #D0D5D9;
+}
+
+section {
+    background-color: white;
+    border-top-right-radius: 80px 80px;
+    border-bottom-left-radius: 80px 80px;
 }
 
 /*images are never larger than their container*/
 img {
     max-width: 100%;
 }
-
 
 ul {
     list-style-position: inside;
@@ -64,27 +68,15 @@ th, td {
 links should at least be: underlined (other elements shouldn't, react when they are hovered/focused
 and in a different way when activated*/
 
-/*form rules*/
-button, input, select, textarea, label {
-    font-family: inherit;
-    font-size: 100%;
-    display: block; 
-}
-
-button, input, select, textarea {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    /*width + height*/
-}
-
-/* add usability/accessibility via input:focus, textarea:focus {styles}*/
-
-textarea {
-    overflow: auto;
-}
-
 /*appearance-property: control what system-level-styling is applied*/
+
+footer {
+    background-color: #445916;
+    color: white;
+    border-bottom: solid #B5Bf8F 20px;
+    border-left: solid #B5Bf8F 20px;
+    border-bottom-left-radius: 80px 80px;
+}
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
