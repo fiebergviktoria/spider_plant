@@ -14,6 +14,7 @@ html {
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.6;
     font-size: 2.5em;
+    font-family: "Script MT", "Brush Script MT", cursive;
 }
 
 /*body rules*/
@@ -28,11 +29,29 @@ section {
     background-color: white;
     border-top-right-radius: 80px 80px;
     border-bottom-left-radius: 80px 80px;
+    margin: 1em;
+}
+
+section > div {
+    margin: 1em;
+}
+
+header {
+    margin: 1em;
 }
 
 /*images are never larger than their container*/
 img {
     max-width: 100%;
+    height: auto;
+}
+
+figure {
+    background-color: #B5Bf8F;
+    text-align: center;
+    padding: 0.25em;
+    border-bottom-left-radius: 80px 80px;
+    border-top-right-radius: 80px 80px;
 }
 
 ul {
@@ -68,14 +87,27 @@ th, td {
 links should at least be: underlined (other elements shouldn't, react when they are hovered/focused
 and in a different way when activated*/
 
+a:link {
+    color: #A8D4FF;
+}
+
+a:visited {
+    color: #E0CAF7;
+}
+
+a:active {
+    color: #FFC7C7;
+}
+
 /*appearance-property: control what system-level-styling is applied*/
 
 footer {
-    background-color: #445916;
-    color: white;
-    border-bottom: solid #B5Bf8F 20px;
-    border-left: solid #B5Bf8F 20px;
+    background-color: #334210;
+    color: #D0D5D9;
+    border-bottom: solid #B5Bf8F 10px;
+    border-left: solid #B5Bf8F 10px;
     border-bottom-left-radius: 80px 80px;
+    padding: 1em;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
