@@ -13,7 +13,6 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.6;
-    font-size: 2.5em;
     font-family: "Script MT", "Brush Script MT", cursive;
 }
 
@@ -22,11 +21,11 @@ body {
     font-size: calc(1em + 0.25vw);
     line-height: 1.5;
     margin: 0; /*needs to be separately changed for other elements*/
-    background-color: #D0D5D9;
+    background-color: #B3B6B7;
 }
 
 section {
-    background-color: white;
+    background-color: #F5F5F5;
     border-top-right-radius: 80px 80px;
     border-bottom-left-radius: 80px 80px;
     margin: 1em;
@@ -103,9 +102,7 @@ a:active {
 
 footer {
     background-color: #334210;
-    color: #D0D5D9;
-    border-bottom: solid #B5Bf8F 10px;
-    border-left: solid #B5Bf8F 10px;
+    color: #E1E5E5;
     border-bottom-left-radius: 80px 80px;
     padding: 1em;
 }
