@@ -3,108 +3,91 @@
 /*enable alternative box-model via values for box-sizing (padding and border are included in the visible box)*/
 html {
     box-sizing: border-box;
-    font-family: Perpetua, Baskerville, "Big Caslon", "Palatino Linotype", Palatino, serif;
-    color: #445916;
 }
 
 *, *::before, *::after {
     box-sizing: inherit;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    line-height: 1.6;
-    font-family: "Script MT", "Brush Script MT", cursive;
-}
-
-/*body rules*/
+/* body rules*/
 body {
-    font-size: calc(1em + 0.25vw);
-    line-height: 1.5;
-    margin: 0; /*needs to be separately changed for other elements*/
-    background-color: #B3B6B7;
+  margin: 0;
+  background-color: #b3b6b7;
 }
 
 section {
-    background-color: #F5F5F5;
-    border-top-right-radius: 80px 80px;
-    border-bottom-left-radius: 80px 80px;
-    margin: 1em;
+  background-color: #f5f5f5;
+  border-radius: 0 80px 0 80px;
+  font: calc(1em + 0.25vw)/1.5 Perpetua, Baskerville, "Big Caslon", "Palatino Linotype", Palatino, serif;
+  color: #445916;
 }
 
-section > div {
-    margin: 1em;
+footer {
+  background-color: #334210;
+  color: #e1e5e5;
+  border-bottom-left-radius: 80px;
+  padding: 1em;
 }
 
-header {
-    margin: 1em;
+h1 {
+  font: 3em/1.6 "Script MT", "Brush Script MT", cursive;
+  margin: 0;
 }
 
 /*images are never larger than their container*/
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+figure img {
+  border-radius: 0 60px 0 60px;
+  background-color: #B5Bf8F;
+  padding: 1em;
 }
 
 figure {
-    background-color: #B5Bf8F;
-    text-align: center;
-    padding: 0.25em;
-    border-bottom-left-radius: 80px 80px;
-    border-top-right-radius: 80px 80px;
+  text-align: center;
+  display: inline-block;
 }
 
-ul {
-    list-style-position: inside;
-    margin: 0;
-    padding: 0;
+figcaption {
+  font-size: calc(0.5em + 0.25vw);
 }
 
-/*table rules*/
-/*table-layout: fixed -> table behaves more predictably, columns follow width of their headings
-border-collapse: collapse -> borders collapse into one*/
-table {
-    table-layout: fixed;
-    border-collapse: collapse;
-    width: 100%;
+div {
+  padding: 0.5em;
 }
-
-th, td {
-    text-align: left;
-    line-height: 1;
-    font-size: calc(0.75em + 0.25vw);
-    overflow-wrap: break-word;
-    padding: 0.25em 0.5em 0.5em 0.5em;
-}
-
-    /*enable horizontal scrolling for tables
-    .fig-table {
-        max-width: 100%; 
-        overflow-x: scroll;
-    }*/
 
 /*style links in this order: a:link, a:visited, a:focus, a:hover, a:active
 links should at least be: underlined (other elements shouldn't, react when they are hovered/focused
 and in a different way when activated*/
-
 a:link {
-    color: #A8D4FF;
+  color: #A8D4FF;
 }
 
 a:visited {
-    color: #E0CAF7;
+  color: #E0CAF7;
 }
 
 a:active {
-    color: #FFC7C7;
+  color: #FFC7C7;
 }
 
-/*appearance-property: control what system-level-styling is applied*/
+a.img:link {
+  color: #002B5C;
+}
 
-footer {
-    background-color: #334210;
-    color: #E1E5E5;
-    border-bottom-left-radius: 80px 80px;
-    padding: 1em;
+a.img:visited {
+  color: #3F1371;
+}
+
+a.img:active {
+  color: #610000;
+}
+
+.imprint {
+  padding-left: 0.5em;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -120,5 +103,108 @@ footer {
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
+    }
+  }
+
+  .container-one {
+    margin: 2vmax 2vmax 0 2vmax;
+  }
+
+  .container-two {
+    margin: 0 2vmax 2vmax 2vmax;
+  }
+
+  @supports(display: grid) {
+    @media screen and (min-width: 768px) {
+      .container-one {
+        display: grid;
+        grid-column: 1;
+        grid-template-areas: 
+        "i1 i2"
+        "i1 i2"
+        "i3 i4"
+        "i5 i5";
+        place-items: center;
+      }
+    
+      .item-one-co {
+        grid-area: i1;
+      }
+    
+      .item-two-co {
+        grid-area: i2;
+      }
+      
+      .item-three-co {
+        grid-area: i3;
+      }
+    
+      .item-four-co {
+        grid-area: i4;
+      }
+    
+      .item-five-co {
+        grid-area: i5;
+        align-self: end;
+        justify-self: stretch;
+      }
+    
+      .container-two {
+        display: grid;
+        grid-column: 2;
+        grid-template-areas: 
+        "i1 i2"
+        "i3 i4"
+        "i5 i6"
+        "i7 i7";
+        place-items: center;
+      }
+    
+      .item-one-ct {
+        grid-area: i1;
+      }
+    
+      .item-two-ct {
+        grid-area: i2;
+      }
+    
+      .item-three-ct {
+        grid-area: i3;
+      }
+    
+      .item-four-ct {
+        grid-area: i4;
+      }
+    
+      .item-five-ct {
+        grid-area: i5;
+      }
+    
+      .item-six-ct {
+        grid-area: i6;
+      }
+    
+      .item-seven-ct {
+        grid-area: i7;
+        align-self: end;
+        justify-self: stretch;
+      }
+    }
+
+    @media screen and (min-width: 1500px) {
+      .container-main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0;
+        gap: 0;
+      }
+
+      .container-one {
+        margin: 2vmax 0 10vmax 2vmax;
+      }
+
+      .container-two {
+        margin: 10vmax 2vmax 2vmax 0;
+      }
     }
   }
