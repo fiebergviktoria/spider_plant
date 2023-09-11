@@ -1,0 +1,30 @@
+@use '../abstracts/variables';
+
+/*default theme*/
+body {
+    background-color: #b3b6b7;
+}
+
+section {
+    background-color: variables.$white;
+    border-radius: 0 calc(5 * variables.$defaultem) 0 calc(5 * variables.$defaultem);
+  }
+  
+  figure img {
+    border-radius: 0 calc(4 * variables.$defaultem) 0 calc(4 * variables.$defaultem);
+    background-color: variables.$lightgreen;
+    padding: variables.$defaultem;
+  }
+  
+  figure {
+    text-align: center;
+    display: inline-block;
+  }
+  
+  div {
+    padding: calc(variables.$defaultem / 2);
+  }
+  
+  .imprint {
+    padding-left: calc(variables.$defaultem / 2);
+  }

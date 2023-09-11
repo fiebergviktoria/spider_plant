@@ -1,0 +1,8 @@
+@use '../abstracts/variables';
+
+/*footer rules*/
+footer {
+    background-color: #334210;
+    border-bottom-left-radius: calc(5 * variables.$defaultem);
+    padding: variables.$defaultem;
+}

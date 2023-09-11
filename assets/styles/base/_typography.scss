@@ -1,0 +1,19 @@
+@use '../abstracts/variables';
+
+/*typography rules*/
+html {
+    font: calc(variables.$defaultem + 0.25vw)/1.5 Perpetua, Baskerville, "Big Caslon", "Palatino Linotype", Palatino, serif;
+    color: variables.$green;
+}
+
+h1 {
+    font: calc(variables.$defaultem * 3)/1.6 "Script MT", "Brush Script MT", cursive;
+}
+
+figcaption {
+    font-size: calc(variables.$defaultem / 2 + 0.25vw);
+}
+
+footer {
+    color: variables.$white;
+}

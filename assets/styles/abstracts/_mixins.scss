@@ -1,0 +1,10 @@
+//with 'as *' namespaces are not needed, only use for files you trust
+@use 'variables' as *;
+
+@mixin gridareas($word) {
+    @for $i from 1 through 7 {
+        .grid-item-#{$word}#{$i} {
+            grid-area: i#{$i};
+        }
+    }
+}

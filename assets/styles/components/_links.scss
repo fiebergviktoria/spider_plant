@@ -1,0 +1,26 @@
+/*style links in this order: a:link, a:visited, a:focus, a:hover, a:active
+links should at least be: underlined (other elements shouldn't, react when they are hovered/focused
+and in a different way when activated*/
+a:link {
+    color: #A8D4FF;
+  }
+  
+  a:visited {
+    color: #E0CAF7;
+  }
+  
+  a:active {
+    color: #FFC7C7;
+  }
+  
+  a.img:link {
+    color: #002B5C;
+  }
+  
+  a.img:visited {
+    color: #3F1371;
+  }
+  
+  a.img:active {
+    color: #610000;
+  }

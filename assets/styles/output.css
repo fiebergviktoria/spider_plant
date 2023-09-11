@@ -1,18 +1,210 @@
-.container-main {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+/*reset rules*/
+/*add in HTML: <meta name="viewport" content="width=device-width, initial-scale=1">*/
+/*enable alternative box-model via values for box-sizing (padding and border are included in the visible box)*/
+html {
+  box-sizing: border-box;
 }
 
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+/*images are never larger than their container*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 .container-one {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  margin: 2vmax 2vmax 0 2vmax;
 }
 
 .container-two {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  margin: 0 2vmax 2vmax 2vmax;
+}
+
+/*typography rules*/
+html {
+  font: calc(1em + 0.25vw)/1.5 Perpetua, Baskerville, "Big Caslon", "Palatino Linotype", Palatino, serif;
+  color: #445916;
+}
+
+h1 {
+  font: 3em/1.6 "Script MT", "Brush Script MT", cursive;
+}
+
+figcaption {
+  font-size: calc(0.5em + 0.25vw);
+}
+
+footer {
+  color: #f5f5f5;
+}
+
+/*footer rules*/
+footer {
+  background-color: #334210;
+  border-bottom-left-radius: 5em;
+  padding: 1em;
+}
+
+/*grid-rules*/
+@supports (display: grid) {
+  @media screen and (min-width: 50em) {
+    .container-one {
+      display: grid;
+      grid-template-areas: "i1 i2" "i3 i4" "i5 i6" "i7 i7";
+      place-items: center;
+    }
+    .grid-item-left1 {
+      grid-area: i1;
+    }
+    .grid-item-left2 {
+      grid-area: i2;
+    }
+    .grid-item-left3 {
+      grid-area: i3;
+    }
+    .grid-item-left4 {
+      grid-area: i4;
+    }
+    .grid-item-left5 {
+      grid-area: i5;
+    }
+    .grid-item-left6 {
+      grid-area: i6;
+    }
+    .grid-item-left7 {
+      grid-area: i7;
+    }
+    .grid-item-left7 {
+      align-self: end;
+      justify-self: stretch;
+    }
+    .container-two {
+      display: grid;
+      grid-template-areas: "i1 i2" "i3 i4" "i5 i6" "i7 i7";
+      place-items: center;
+    }
+    .grid-item-right1 {
+      grid-area: i1;
+    }
+    .grid-item-right2 {
+      grid-area: i2;
+    }
+    .grid-item-right3 {
+      grid-area: i3;
+    }
+    .grid-item-right4 {
+      grid-area: i4;
+    }
+    .grid-item-right5 {
+      grid-area: i5;
+    }
+    .grid-item-right6 {
+      grid-area: i6;
+    }
+    .grid-item-right7 {
+      grid-area: i7;
+    }
+    .grid-item-right7 {
+      align-self: end;
+      justify-self: stretch;
+    }
+  }
+  @media screen and (min-width: 94em) {
+    .container-main {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 0;
+      gap: 0;
+    }
+    .container-one {
+      grid-column: 1;
+      margin: 2vmax 0 10vmax 2vmax;
+    }
+    .container-two {
+      grid-column: 2;
+      margin: 10vmax 2vmax 2vmax 0;
+    }
+  }
+}
+/*style links in this order: a:link, a:visited, a:focus, a:hover, a:active
+links should at least be: underlined (other elements shouldn't, react when they are hovered/focused
+and in a different way when activated*/
+a:link {
+  color: #A8D4FF;
+}
+
+a:visited {
+  color: #E0CAF7;
+}
+
+a:active {
+  color: #FFC7C7;
+}
+
+a.img:link {
+  color: #002B5C;
+}
+
+a.img:visited {
+  color: #3F1371;
+}
+
+a.img:active {
+  color: #610000;
+}
+
+/*default theme*/
+body {
+  background-color: #b3b6b7;
+}
+
+section {
+  background-color: #f5f5f5;
+  border-radius: 0 5em 0 5em;
+}
+
+figure img {
+  border-radius: 0 4em 0 4em;
+  background-color: #B5Bf8F;
+  padding: 1em;
+}
+
+figure {
+  text-align: center;
+  display: inline-block;
+}
+
+div {
+  padding: 0.5em;
+}
+
+.imprint {
+  padding-left: 0.5em;
 }
 
 /*# sourceMappingURL=output.css.map */

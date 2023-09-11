@@ -1,0 +1,60 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+  
+/*grid-rules*/
+    @supports(display: grid) {
+      @media screen and (min-width: calc(50 * variables.$defaultem)) {
+        .container-one {
+          display: grid;
+          grid-template-areas: 
+          "i1 i2"
+          "i3 i4"
+          "i5 i6"
+          "i7 i7";
+          place-items: center;
+        }
+
+        @include mixins.gridareas(left);
+
+        .grid-item-left7 {
+            align-self: end;
+            justify-self: stretch;
+        }
+      
+        .container-two {
+          display: grid;
+          grid-template-areas: 
+          "i1 i2"
+          "i3 i4"
+          "i5 i6"
+          "i7 i7";
+          place-items: center;
+        }
+
+        @include mixins.gridareas(right);
+
+        .grid-item-right7 {
+            align-self: end;
+            justify-self: stretch;
+        }
+      }
+  
+      @media screen and (min-width: calc(94 * variables.$defaultem)) {
+        .container-main {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 0;
+          gap: 0;
+        }
+  
+        .container-one {
+          grid-column: 1;
+          margin: 2vmax 0 10vmax 2vmax;
+        }
+  
+        .container-two {
+          grid-column: 2;
+          margin: 10vmax 2vmax 2vmax 0;
+        }
+      }
+    }
