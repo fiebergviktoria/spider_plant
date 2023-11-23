@@ -25,8 +25,8 @@
  * file [310px-Chlorophytum_comosum_eastern_Ampel.jpg](assets/images/310px_Chlorophytum_comosum_Ampel.jpg) via [Wikimedia Commons, scaled and cropped from original](https://commons.wikimedia.org/wiki/File:Chlorophytum_comosum_Ampel.jpg), and the Author is Florian Wickern
   * file [310px-Chlorophytum_comosum_eastern_cape.jpg](assets/images/310px_Chlorophytum_comosum_eastern_cape.jpg) via [Wikimedia Commons, scaled and cropped from original](https://commons.wikimedia.org/wiki/File:Chlorophytum_comosum_eastern_cape.jpg), and the author is Tony Rebelo
   * all text (see [LICENSE.md](LICENSE.md) for a list of authors)
-  * file [310px_Chlorophytum_comosum_flower.jpg](assets/images/310px_Chlorophytum_comosum_flower.jpg), the Author is Viktoria Fieberg
-  * file [spider_plant_illustration.png](assets/images/spider_plant_illustration.png), the Author is Viktoria Fieberg
+  * file [310px_Chlorophytum_comosum_flower.jpg](assets/images/310px_Chlorophytum_comosum_flower.jpg), the Author is [Viktoria Fieberg](https://github.com/fiebergviktoria)
+  * file [spider_plant_illustration.png](assets/images/spider_plant_illustration.png), the Author is [Viktoria Fieberg](https://github.com/fiebergviktoria)
 
 The file [310px-Agave_tequilana.jpg](assets/images/310px-Agave_tequilana.jpg) is distributed under the [license CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/) via [Wikimedia Commons, scaled and cropped from original,](https://commons.wikimedia.org/wiki/File:Agave_tequilana_1.jpg) and the Author is [Stan Shebs](https://en.wikipedia.org/wiki/User:Stan_Shebs).  
 All code is distributed under [MIT license](https://spdx.org/licenses/MIT.html). See [LICENSE.md](LICENSE.md) for more information.
